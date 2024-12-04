@@ -20,10 +20,10 @@ taskkill /im rustdesk.exe /f >nul 2>&1
 cd /d %temp%
 
 :: If you have a Rustdesk server, type the domain name or IP address. Example: set domain=192.168.1.1
-set domain=
+set domain=rust.bdstw.org
 
 :: If you have a Rustdesk server, type the key your server generated. Example: set key=ghtYUjykk2489=
-set key=
+set key=818056
 
 :: NOTE: 
 :: If you do not specify a domain and key, RustDesk will install with default settings and use public servers.
