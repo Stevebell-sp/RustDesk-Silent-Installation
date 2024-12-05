@@ -20,10 +20,10 @@ taskkill /im rustdesk.exe /f >nul 2>&1
 cd /d %temp%
 
 :: If you have a Rustdesk server, type the domain name or IP address. Example: set domain=192.168.1.1
-set domain=rust.bdstw.org
+set domain=
 
 :: If you have a Rustdesk server, type the key your server generated. Example: set key=ghtYUjykk2489=
-set key=818056
+set key=
 
 :: NOTE: 
 :: If you do not specify a domain and key, RustDesk will install with default settings and use public servers.
@@ -42,7 +42,7 @@ echo.
 :: https://github.com/techahold/rustdeskinstall/blob/master/WindowsAgentAIOInstall.ps1
 
 :: Create the get_latest_version.ps1 file and write its content
-echo $url = 'https://www.github.com//rustdesk/rustdesk/releases/latest' > get_latest_version.ps1
+echo $url = 'https://www.github.com//Stevebell-sp/rustdesk/releases/latest' > get_latest_version.ps1
 echo $request = [System.Net.WebRequest]::Create($url) >> get_latest_version.ps1
 echo $response = $request.GetResponse() >> get_latest_version.ps1
 echo $realTagUrl = $response.ResponseUri.OriginalString >> get_latest_version.ps1
@@ -66,8 +66,8 @@ set version=%version:"=%
 
 echo    Latest version of RustDesk: %version%
 
-set "url_64=https://github.com/Stevebell-sp/rustdesk/releases/download/%version%/rustdesk-%version%-x86_64.exe"
-set "url_32=https://github.com/Stevebell-sp/rustdesk/releases/download/%version%/rustdesk-%version%-x86-sciter.exe"
+set "url_64=https://github.com/Stevebell-sp/rustdesk/releases/download/nightly/rustdesk-%version%-x86_64.exe"
+set "url_32=https://github.com/Stevebell-sp/rustdesk/releases/download/nightly/rustdesk-%version%-x86-sciter.exe"
 
 :: Detect Windows version
 for /f "tokens=4-5 delims=[.] " %%i in ('ver') do set os_version=%%i.%%j
