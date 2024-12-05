@@ -66,8 +66,8 @@ set version=%version:"=%
 
 echo    Latest version of RustDesk: %version%
 
-set "url_64=https://github.com/rustdesk/rustdesk/releases/download/%version%/rustdesk-%version%-x86_64.exe"
-set "url_32=https://github.com/rustdesk/rustdesk/releases/download/%version%/rustdesk-%version%-x86-sciter.exe"
+set "url_64=https://github.com/Stevebell-sp/rustdesk/releases/download/%version%/rustdesk-%version%-x86_64.exe"
+set "url_32=https://github.com/Stevebell-sp/rustdesk/releases/download/%version%/rustdesk-%version%-x86-sciter.exe"
 
 :: Detect Windows version
 for /f "tokens=4-5 delims=[.] " %%i in ('ver') do set os_version=%%i.%%j
