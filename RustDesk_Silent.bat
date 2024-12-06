@@ -42,7 +42,8 @@ echo.
 :: https://github.com/techahold/rustdeskinstall/blob/master/WindowsAgentAIOInstall.ps1
 
 :: Create the get_latest_version.ps1 file and write its content
-echo $url = 'https://www.github.com//rustdesk/rustdesk/releases/latest' > get_latest_version.ps1
+:: echo $url = 'https://www.github.com//rustdesk/rustdesk/releases/latest' > get_latest_version.ps1
+echo $url = 'https://www.github.com//Stevebell-sp/rustdesk/releases/latest' > get_latest_version.ps1
 echo $request = [System.Net.WebRequest]::Create($url) >> get_latest_version.ps1
 echo $response = $request.GetResponse() >> get_latest_version.ps1
 echo $realTagUrl = $response.ResponseUri.OriginalString >> get_latest_version.ps1
@@ -66,9 +67,9 @@ set version=%version:"=%
 
 echo    Latest version of RustDesk: %version%
 
-set "url_64=https://github.com/rustdesk/rustdesk/releases/download/%version%/rustdesk-%version%-x86_64.exe"
-set "url_32=https://github.com/rustdesk/rustdesk/releases/download/%version%/rustdesk-%version%-x86-sciter.exe"
-
+set "url_64=https://github.com/Stevebell-sp/rustdesk/releases/download/nightly/rustdesk-%version%-x86_64.exe"
+set "url_32=https://github.com/Stevebell-sp/rustdesk/releases/download/nightly/rustdesk-%version%-x86-sciter.exe"
+::          https://github.com/Stevebell-sp/rustdesk/releases/download/nightly/rustdesk-1.3.4-x86_64.exe
 :: Detect Windows version
 for /f "tokens=4-5 delims=[.] " %%i in ('ver') do set os_version=%%i.%%j
 
