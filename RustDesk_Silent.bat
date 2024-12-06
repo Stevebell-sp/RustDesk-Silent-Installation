@@ -10,7 +10,7 @@
 
 @echo off
 setlocal enabledelayedexpansion
-title RustDesk ^| made by Abdullah ERTURK
+title RustDesk ^| 編碼 by 小誠
 mode con:cols=50 lines=5
 :: Check if running as administrator
 %1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit >nul 2>&1
@@ -29,12 +29,12 @@ set key=
 :: If you do not specify a domain and key, RustDesk will install with default settings and use public servers.
 
 echo.
-echo.
-echo    RustDesk
+echo.   made by Abdullah ERTURK
+echo    RustDesk by 小誠
 echo.
 echo.
 
-echo    Initializing...
+echo    程式啟動中...
 echo.
 
 
@@ -82,7 +82,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo    RustDesk software is downloading, please wait...
+echo    RustDesk 軟體 正在下載中 請稍後...
 echo.
 powershell -Command "(New-Object Net.WebClient).DownloadFile('%download_url%', 'rustdesk.exe')"
 
@@ -111,13 +111,13 @@ del /f /q rustdesk* >nul 2>&1
 del /f /q version.txt >nul 2>&1
 del /f /q get_latest_version.ps1 >nul 2>&1
 echo.
-echo    INSTALLATION COMPLETED 
+echo    安裝完成 
 echo.
 echo.
-echo    You can run the program via the shortcut created on the desktop or the Start Menu...
+echo    您可以透過桌面或開始功能表上建立的捷徑來運行該程式...
 echo.
 echo.
-echo    Press any key to EXIT...
+echo    按任意鍵關閉...
 echo.
 pause >nul 2>&1
 exit
