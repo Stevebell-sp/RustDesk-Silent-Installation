@@ -42,8 +42,8 @@ echo.
 :: https://github.com/techahold/rustdeskinstall/blob/master/WindowsAgentAIOInstall.ps1
 
 :: Create the get_latest_version.ps1 file and write its content
-:: echo $url = 'https://www.github.com//rustdesk/rustdesk/releases/latest' > get_latest_version.ps1
-echo $url = 'https://www.github.com//Stevebell-sp/rustdesk/releases/latest' > get_latest_version.ps1
+echo $url = 'https://www.github.com//rustdesk/rustdesk/releases/latest' > get_latest_version.ps1
+:: echo $url = 'https://www.github.com//Stevebell-sp/rustdesk/releases/latest' > get_latest_version.ps1
 echo $request = [System.Net.WebRequest]::Create($url) >> get_latest_version.ps1
 echo $response = $request.GetResponse() >> get_latest_version.ps1
 echo $realTagUrl = $response.ResponseUri.OriginalString >> get_latest_version.ps1
