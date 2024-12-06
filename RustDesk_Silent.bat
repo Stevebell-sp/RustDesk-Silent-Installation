@@ -10,7 +10,7 @@
 
 @echo off
 setlocal enabledelayedexpansion
-title RustDesk ^| ç·¨ç¢¼ by å°èª 
+title RustDesk ^| ½s½X by ¤p¸Û
 mode con:cols=50 lines=5
 :: Check if running as administrator
 %1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit >nul 2>&1
@@ -30,11 +30,11 @@ set key=
 
 echo.
 echo.   made by Abdullah ERTURK
-echo    RustDesk by å°èª 
+echo    RustDesk by ¤p¸Û
 echo.
 echo.
 
-echo    ç¨‹å¼å•Ÿå‹•ä¸­...
+echo    µ{¦¡±Ò°Ê¤¤...
 echo.
 
 
@@ -82,7 +82,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo    RustDesk è»Ÿé«” æ­£åœ¨ä¸‹è¼‰ä¸­ è«‹ç¨å¾Œ...
+echo    RustDesk ³nÅé ¥¿¦b¤U¸ü¤¤ ½Ðµy«á...
 echo.
 powershell -Command "(New-Object Net.WebClient).DownloadFile('%download_url%', 'rustdesk.exe')"
 
@@ -111,13 +111,13 @@ del /f /q rustdesk* >nul 2>&1
 del /f /q version.txt >nul 2>&1
 del /f /q get_latest_version.ps1 >nul 2>&1
 echo.
-echo    å®‰è£å®Œæˆ 
+echo    ¦w¸Ë§¹¦¨ 
 echo.
 echo.
-echo    æ‚¨å¯ä»¥é€éŽæ¡Œé¢æˆ–é–‹å§‹åŠŸèƒ½è¡¨ä¸Šå»ºç«‹çš„æ·å¾‘ä¾†é‹è¡Œè©²ç¨‹å¼...
+echo    ±z¥i¥H³z¹L®à­±©Î¶}©l¥\¯àªí¤W«Ø¥ßªº±¶®|¨Ó¹B¦æ¸Óµ{¦¡...
 echo.
 echo.
-echo    æŒ‰ä»»æ„éµé—œé–‰...
+echo    «ö¥ô·NÁäÃö³¬...
 echo.
 pause >nul 2>&1
 exit
