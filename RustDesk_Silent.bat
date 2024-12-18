@@ -10,7 +10,7 @@
 
 @echo off
 setlocal enabledelayedexpansion
-title RustDesk ^| made by Abdullah ERTURK
+title RustDesk ^| 編碼 by 小誠
 mode con:cols=50 lines=5
 :: Check if running as administrator
 %1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit >nul 2>&1
@@ -20,21 +20,21 @@ taskkill /im rustdesk.exe /f >nul 2>&1
 cd /d %temp%
 
 :: If you have a Rustdesk server, type the domain name or IP address. Example: set domain=192.168.1.1
-set domain=
+set domain=rust.bdstw.org
 
 :: If you have a Rustdesk server, type the key your server generated. Example: set key=ghtYUjykk2489=
-set key=
+set key=818056
 
 :: NOTE: 
 :: If you do not specify a domain and key, RustDesk will install with default settings and use public servers.
 
 echo.
-echo.
-echo    RustDesk
+echo.   made by Abdullah ERTURK
+echo    RustDesk by 小誠
 echo.
 echo.
 
-echo    Initializing...
+echo    程式啟動中...
 echo.
 
 
@@ -43,6 +43,7 @@ echo.
 
 :: Create the get_latest_version.ps1 file and write its content
 echo $url = 'https://www.github.com//rustdesk/rustdesk/releases/latest' > get_latest_version.ps1
+:: echo $url = 'https://www.github.com//Stevebell-sp/rustdesk/releases/latest' > get_latest_version.ps1
 echo $request = [System.Net.WebRequest]::Create($url) >> get_latest_version.ps1
 echo $response = $request.GetResponse() >> get_latest_version.ps1
 echo $realTagUrl = $response.ResponseUri.OriginalString >> get_latest_version.ps1
@@ -66,9 +67,9 @@ set version=%version:"=%
 
 echo    Latest version of RustDesk: %version%
 
-set "url_64=https://github.com/rustdesk/rustdesk/releases/download/%version%/rustdesk-%version%-x86_64.exe"
-set "url_32=https://github.com/rustdesk/rustdesk/releases/download/%version%/rustdesk-%version%-x86-sciter.exe"
-
+set "url_64=https://github.com/Stevebell-sp/rustdesk/releases/download/nightly/rustdesk-%version%-x86_64.exe"
+set "url_32=https://github.com/Stevebell-sp/rustdesk/releases/download/nightly/rustdesk-%version%-x86-sciter.exe"
+::          https://github.com/Stevebell-sp/rustdesk/releases/download/nightly/rustdesk-1.3.4-x86_64.exe
 :: Detect Windows version
 for /f "tokens=4-5 delims=[.] " %%i in ('ver') do set os_version=%%i.%%j
 
@@ -81,7 +82,7 @@ if errorlevel 1 (
 )
 
 echo.
-echo    RustDesk software is downloading, please wait...
+echo    RustDesk 軟體 正在下載中 請稍後...
 echo.
 powershell -Command "(New-Object Net.WebClient).DownloadFile('%download_url%', 'rustdesk.exe')"
 
@@ -110,13 +111,13 @@ del /f /q rustdesk* >nul 2>&1
 del /f /q version.txt >nul 2>&1
 del /f /q get_latest_version.ps1 >nul 2>&1
 echo.
-echo    INSTALLATION COMPLETED 
+echo    安裝完成 
 echo.
 echo.
-echo    You can run the program via the shortcut created on the desktop or the Start Menu...
+echo    您可以透過桌面或開始功能表上建立的捷徑來運行該程式...
 echo.
 echo.
-echo    Press any key to EXIT...
+echo    按任意鍵關閉...
 echo.
 pause >nul 2>&1
 exit
